@@ -113,70 +113,41 @@
                     alt="Ícono Derechos Humanos"
                     style="width: 100%; max-width: 675px; height: auto; margin-bottom: 15px;">
 
+                <div style="max-width: 1100px; margin: 0 auto; text-align:center;">
 
-                <div style="max-width: 1100px; margin: 0 auto;">
-                    <!-- Títulos -->
-                    <p class="titulo-convocatoria" style="color: #696969; text-align: center; line-height: 1.2;">
-                        <span style="color: #b28d5f;"> </span><br>
+                    <!-- Título -->
+                    <h2 style="font-family: 'Athelas', serif; color:#94134A; font-size: 32px; margin-bottom: 20px;">
+                        Bordando contra la Violencia
+                    </h2>
+
+                    <!-- Subtítulo -->
+                    <h3 style="font-family:'Regesto Grotesk', sans-serif; color:#b28d5f; margin-bottom: 10px;">
+                        Descripción de la exposición
+                    </h3>
+
+                    <!-- Descripción -->
+                    <p style="font-family: 'Regesto Grotesk', sans-serif; color:#555; font-size:1.05rem; line-height:1.6; padding:0 12px; text-align:justify;">
+                        Bordando contra la Violencia es una muestra que reconoce al bordado y al tejido como prácticas que han trascendido su origen doméstico y ornamental para convertirse en potentes actos de resistencia, memoria y denuncia frente a la violencia de género.
+                        <br><br>
+                        Tradicionalmente asociadas al ideal patriarcal de la “mujer de bien”, estas labores fueron durante siglos enseñadas como parte de la formación doméstica femenina. No obstante, en años recientes, diversas colectivas, creadoras y mujeres en todo el mundo han resignificado estas técnicas para transformar el hilo y la aguja en herramientas de expresión política y acompañamiento comunitario.
+                        <br><br>
+                        Cada pieza que integra esta exposición es resultado de un ejercicio de reflexión, sororidad y toma de conciencia. A través de puntadas, colores y símbolos, se narran historias que hablan de resistencia, dignidad y memoria; historias que visibilizan la violencia machista, pero también la fuerza colectiva que surge al tejer nuestras voces.
+                        <br><br>
+                        Bordando contra la Violencia invita a reconocer el valor del arte textil como vehículo para denunciar, sanar y construir espacios seguros. Esta muestra busca que cada puntada sea un recordatorio de que la creatividad también es una forma de lucha, y que al bordar en comunidad podemos transformar el dolor en acción y el silencio en memoria.
                     </p>
+
                     <br><br>
 
-                    <!-- Texto -->
-                    <p
-                        style="font-family: 'Regesto Grotesk', sans-serif; color: #88898C; font-size: 1.2rem; padding: 0 10px;">
-                       
-                    </p>
-                    <br><br>
+                    <!-- BOTÓN ÚNICO -->
+                    <a href="{{ route('ar.video', 1) }}"
+                        style="display:inline-block; padding:16px 40px; background:#94134A; color:white; border-radius:10px; 
+                            text-decoration:none; font-weight:bold; font-size:1.2rem;">
+                        Ir
+                    </a>
 
-                    <!-- Texto -->
-                    <p
-                        style="font-family: 'Regesto Grotesk', sans-serif; color: #88898C; font-size: 1.2rem; padding: 0 10px;">
-                       
-                    </p>
                 </div>
-
-
-
-                <!-- Botones -->
-                <div style="display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 0 10px;">
-                    <div style="max-width: 100%; width: 100%;">
-                        <a href="{{ route('ar.video', 1) }}"
-                            style="display: block; text-align: center; padding: 16px 32px; background-color: #94134A; color: white; border-radius: 0.5rem; text-decoration: none; font-weight: bold; font-size: 1rem; white-space: normal; word-wrap: break-word; max-width: 400px; margin: 0 auto;">
-                            Español
-                        </a>
-                    </div>
-
-                    <div style="max-width: 100%; width: 100%;">
-                        <a href="{{ route('ar.video', 2) }}"
-                            style="display: block; text-align: center; padding: 16px 32px; background-color: #94134A; color: white; border-radius: 0.5rem; text-decoration: none; font-weight: bold; font-size: 1rem; white-space: normal; word-wrap: break-word; max-width: 400px; margin: 0 auto;">
-                            Inglés
-                        </a>
-                    </div>
-
-                    <div style="max-width: 100%; width: 100%;">
-                        <a href="{{ route('ar.video', 3) }}"
-                            style="display: block; text-align: center; padding: 16px 32px; background-color: #94134A; color: white; border-radius: 0.5rem; text-decoration: none; font-weight: bold; font-size: 1rem; white-space: normal; word-wrap: break-word; max-width: 400px; margin: 0 auto;">
-                            Mazahua 
-                        </a>
-                    </div>
-
-                    <div style="max-width: 100%; width: 100%;">
-                        <a href="{{ route('ar.video', 4) }}"
-                            style="display: block; text-align: center; padding: 16px 32px; background-color: #94134A; color: white; border-radius: 0.5rem; text-decoration: none; font-weight: bold; font-size: 1rem; white-space: normal; word-wrap: break-word; max-width: 400px; margin: 0 auto;">
-                            Otomí
-                        </a>
-                    </div>
-
-                    <div style="max-width: 100%; width: 100%;">
-                        <a href="{{ route('ar.video', 5) }}"
-                            style="display: block; text-align: center; padding: 16px 32px; background-color: #94134A; color: white; border-radius: 0.5rem; text-decoration: none; font-weight: bold; font-size: 1rem; white-space: normal; word-wrap: break-word; max-width: 400px; margin: 0 auto;">
-                            Náhuatl
-                        </a>
-                    </div>
-                </div>
-
-                <div style="clear: both;"></div>
             </div>
+
 
 
 
