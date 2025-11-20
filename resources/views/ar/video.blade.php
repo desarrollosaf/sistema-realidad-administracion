@@ -104,7 +104,7 @@
   </div>
 
   <!-- ESCENA A-FRAME -->
-  <a-scene mindar-image="imageTargetSrc: {{ asset('aframe/examples/assetsSAF/targetsSAF.mind') }}; filterMinCF:0.0001; filterBeta:0.0001;"
+  <a-scene mindar-image="imageTargetSrc: {{ asset('aframe/examples/assetsSAF/bordados.mind') }}; filterMinCF:0.0001; filterBeta:0.0001;"
            color-space="sRGB"
            renderer="colorManagement: true, physicallyCorrectLights"
            vr-mode-ui="enabled: false"
@@ -114,11 +114,9 @@
     <a-entity light="type: directional; intensity: 1" position="1 1 1"></a-entity>
     <a-entity light="type: ambient; intensity: 0.5"></a-entity>
 
-    <!-- Target 0: SOLO DISPARA MODAL -->
-    <a-entity mindar-image-target="targetIndex: 0"></a-entity>
-
-    <!-- Target 1: puede tener modelo si quieres -->
-    <a-entity mindar-image-target="targetIndex: 1"></a-entity>
+    @for ($i = 0; $i < 32; $i++)
+        <a-entity mindar-image-target="targetIndex: {{ $i }}"></a-entity>
+    @endfor
   </a-scene>
 
   <!-- MODAL -->
@@ -149,10 +147,40 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     const targetVideos = {
-      0: "{{ asset('aframe/examples/assetsSAF/oso.mp4') }}",
-      1: "{{ asset('aframe/examples/assetsSAF/snopi.mp4') }}"
-     
+      0: "{{ asset('aframe/examples/assetsSAF/video1.mp4') }}",
+      1: "{{ asset('aframe/examples/assetsSAF/video2.mp4') }}",
+      2: "{{ asset('aframe/examples/assetsSAF/video3.mp4') }}",
+      3: "{{ asset('aframe/examples/assetsSAF/video4.mp4') }}",
+      4: "{{ asset('aframe/examples/assetsSAF/video5.mp4') }}",
+      5: "{{ asset('aframe/examples/assetsSAF/video6.mp4') }}",
+      6: "{{ asset('aframe/examples/assetsSAF/video7.mp4') }}",
+      7: "{{ asset('aframe/examples/assetsSAF/video8.mp4') }}",
+      8: "{{ asset('aframe/examples/assetsSAF/video9.mp4') }}",
+      9: "{{ asset('aframe/examples/assetsSAF/video10.mp4') }}",
+      10: "{{ asset('aframe/examples/assetsSAF/video11.mp4') }}",
+      11: "{{ asset('aframe/examples/assetsSAF/video12.mp4') }}",
+      12: "{{ asset('aframe/examples/assetsSAF/video13.mp4') }}",
+      13: "{{ asset('aframe/examples/assetsSAF/video14.mp4') }}",
+      14: "{{ asset('aframe/examples/assetsSAF/video15.mp4') }}",
+      15: "{{ asset('aframe/examples/assetsSAF/video16.mp4') }}",
+      16: "{{ asset('aframe/examples/assetsSAF/video17.mp4') }}",
+      17: "{{ asset('aframe/examples/assetsSAF/video18.mp4') }}",
+      18: "{{ asset('aframe/examples/assetsSAF/video19.mp4') }}",
+      19: "{{ asset('aframe/examples/assetsSAF/video20.mp4') }}",
+      20: "{{ asset('aframe/examples/assetsSAF/video21.mp4') }}",
+      21: "{{ asset('aframe/examples/assetsSAF/video22.mp4') }}",
+      22: "{{ asset('aframe/examples/assetsSAF/video23.mp4') }}",
+      23: "{{ asset('aframe/examples/assetsSAF/video24.mp4') }}",
+      24: "{{ asset('aframe/examples/assetsSAF/video25.mp4') }}",
+      25: "{{ asset('aframe/examples/assetsSAF/video26.mp4') }}",
+      26: "{{ asset('aframe/examples/assetsSAF/video27.mp4') }}",
+      27: "{{ asset('aframe/examples/assetsSAF/video28.mp4') }}",
+      28: "{{ asset('aframe/examples/assetsSAF/video29.mp4') }}",
+      29: "{{ asset('aframe/examples/assetsSAF/video30.mp4') }}",
+      30: "{{ asset('aframe/examples/assetsSAF/video31.mp4') }}",
+      31: "{{ asset('aframe/examples/assetsSAF/video32.mp4') }}"
     };
+
 
     $(document).ready(function () {
       const idioma = {!! json_encode($idioma) !!};
@@ -164,38 +192,13 @@
       //audioControl.src = alarma.src;
       //audioControl.load();
 
-      const target0 = document.querySelector("[mindar-image-target='targetIndex: 0']");
-      const target1 = document.querySelector("[mindar-image-target='targetIndex: 1']");
+      for (let i = 0; i <= 31; i++) {
+        const target = document.querySelector(`[mindar-image-target='targetIndex: ${i}']`);
 
-      if (target0) {
-        console.log('holaaa target 0')
-        target0.addEventListener("targetFound", () => handleTargetFound(0));
-        /*target0.addEventListener("targetFound", () => {
-          console.log("Target detectado");
-          modal.classList.remove('hidden');
-          modal.style.display = "flex";
-          //audioControl.play();
-
-          const video = modal.querySelector('video');
-          video.muted = false;
-          video.play();
-
-        });*/
-      }
-
-       if (target1) {
-        console.log('holaaa target 1')
-        target1.addEventListener("targetFound", () => handleTargetFound(1));
-        /*target1.addEventListener("targetFound", () => {
-          console.log("Target detectado");
-          modal.classList.remove('hidden');
-          modal.style.display = "flex";
-          //audioControl.play();
-
-          const video = modal.querySelector('video');
-          video.muted = false;
-          video.play();
-        });*/
+        if (target) {
+          console.log("holaaa target " + i);
+          target.addEventListener("targetFound", () => handleTargetFound(i));
+        }
       }
 
       function handleTargetFound(targetIndex) {
