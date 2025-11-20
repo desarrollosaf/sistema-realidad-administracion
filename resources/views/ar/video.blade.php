@@ -224,7 +224,7 @@
       });*/
 
       $('#menuBtn').click(() => {
-        window.location.href = "/";
+        window.location.href = "/bordados";
       });
 
       window.closeModal = function () {
